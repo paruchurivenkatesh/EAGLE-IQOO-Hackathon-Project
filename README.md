@@ -575,39 +575,33 @@ Add screenshots of the application here after finalizing the UI.
 
 ### 🏠 Home Dashboard
 
-```text
-[ Add Screenshot Here ]
-```
+<img width="1920" height="1140" alt="Screenshot 2026-09-22 140801" src="https://github.com/user-attachments/assets/f86af80c-0cc5-4eef-bff2-e372f1e180e9" />
+
 
 ### 📷 Product Scanner
 
-```text
-[ Add Screenshot Here ]
-```
+<img width="1920" height="1140" alt="Screenshot 2026-09-22 140910" src="https://github.com/user-attachments/assets/bee70f26-9e0c-498b-a3f7-5b3f7eedb520" />
+
 
 ### 🤖 AI Analysis
 
-```text
-[ Add Screenshot Here ]
-```
+<img width="1920" height="1140" alt="Screenshot 2026-09-22 141042" src="https://github.com/user-attachments/assets/cd68e528-d919-4c1f-b5f8-7d2f0a88c44e" />
+
 
 ### ✅ Verification Result
 
-```text
-[ Add Screenshot Here ]
-```
+<img width="1920" height="1140" alt="Screenshot 2026-09-22 141118" src="https://github.com/user-attachments/assets/8cc906f6-6e6c-49be-83d1-f145d8239c0c" />
 
-### ⚖️ Product Comparison
 
-```text
-[ Add Screenshot Here ]
-```
+### ⚖️ All Features
+
+<img width="1920" height="1140" alt="Screenshot 2026-09-22 141229" src="https://github.com/user-attachments/assets/4aca572c-9543-4e74-9b5a-01c80d35d6e1" />
+
 
 ### 🕘 Scan History
 
-```text
-[ Add Screenshot Here ]
-```
+<img width="1920" height="1140" alt="Screenshot 2026-09-22 141159" src="https://github.com/user-attachments/assets/31ece885-174a-4ca4-811f-7a1cf2dbe103" />
+
 
 ---
 
