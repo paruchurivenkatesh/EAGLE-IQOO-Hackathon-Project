@@ -1,0 +1,167 @@
+.analysis-container {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.analysis-header {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.analysis-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.analysis-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  color: var(--accent-primary);
+  margin-bottom: 40px;
+}
+
+.analysis-visual {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.captured-product {
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1621551122354-e96737d6eba3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.scan-line-horizontal {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-primary);
+  box-shadow: 0 0 15px var(--accent-primary);
+  animation: scan-horizontal 2s ease-in-out infinite alternate;
+}
+
+@keyframes scan-horizontal {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+.orbit-node {
+  position: absolute;
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid var(--border-highlight);
+  color: var(--text-primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  animation: float-node 3s ease-in-out infinite alternate;
+}
+
+.node-packaging { top: -20px; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+.node-logo { top: 20%; left: -40px; animation-delay: 0.5s; }
+.node-ocr { top: 20%; right: -40px; animation-delay: 1s; }
+.node-qr { bottom: 20%; left: -40px; animation-delay: 1.5s; }
+.node-barcode { bottom: 20%; right: -40px; animation-delay: 2s; }
+.node-reference { bottom: -20px; left: 50%; transform: translateX(-50%); animation-delay: 2.5s; }
+
+@keyframes float-node {
+  from { transform: translateY(0px) translateX(-50%); }
+  to { transform: translateY(-10px) translateX(-50%); }
+}
+/* override for side nodes */
+.node-logo, .node-ocr, .node-qr, .node-barcode {
+  transform: none;
+}
+@keyframes float-side {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-10px); }
+}
+
+.analysis-status {
+  text-align: center;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.status-text {
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+.complete-text {
+  margin-top: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  animation: fade-in 0.5s ease;
+}
+
+/* Timeline vertical on desktop, horizontal on mobile? Let's make it a nice vertical list on the side for desktop, and horizontal for mobile */
+.timeline-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+.timeline-step.active {
+  opacity: 1;
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+.timeline-step.active .step-dot {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.step-num {
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+.step-label {
+  font-size: 0.5rem;
+  display: none; /* hidden on small screens */
+}
+
+@media (min-width: 768px) {
+  .analysis-visual { width: 300px; height: 450px; }
+  .step-label { display: block; }
+}
