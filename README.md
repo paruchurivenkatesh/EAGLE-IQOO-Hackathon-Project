@@ -565,7 +565,7 @@ The project aims to demonstrate how AI and smartphone capabilities can be combin
 | --------------------- | -------------------------------- |
 | 👑 **Author / Lead**  | **Paruchuri Venkatesh**          |
 | 👨‍💻 **Team Member** | **Thota Shanmukh Raghu Vamsi**   |
-| 👨‍💻 **Team Member** | **Sigatarapu Kushal Venu Gopal** |
+| 👨‍💻 **Team Member** | **Rokkam Sai Rahul** |
 
 ---
 
